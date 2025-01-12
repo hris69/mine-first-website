@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vape Shop</title>
+    
+    <link rel="stylesheet" href="./style.css">
+  
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 500px;
+            margin: 15% auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .modal-header {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .modal-body {
+            margin: 20px 0;
+            color: #555;
+            font-size: 18px;
+        }
+
+        .modal-footer {
+            margin-top: 20px;
+        }
+
+        .modal-footer button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #000000;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        .modal-footer button:hover {
+            background-color: #45a049;
+        }
+
+        .modal-footer .deny {
+            background-color: #68045f;
+        }
+
+        .modal-footer .deny:hover {
+            background-color: #e53935;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+
+</head>
+<body class="body">
+    <!-- Main content of the page -->
+    
+
+    <!-- Age Verification Modal -->
+    <div id="ageModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">Verify Your Age</div>
+            <div class="modal-body">
+                <p><b>Are you 18 or older?</b> </p>
+            </div>
+            <div class="modal-footer">
+                <button id="confirmBtn">Yes, I am 18+</button>
+                <button id="denyBtn" class="deny">No, I am under 18</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal and buttons
+        var modal = document.getElementById("ageModal");
+        var confirmBtn = document.getElementById("confirmBtn");
+        var denyBtn = document.getElementById("denyBtn");
+
+        // Display the modal when the page loads
+        window.onload = function() {
+            modal.style.display = "block";
+        };
+
+        // If user confirms they are 18+
+        confirmBtn.onclick = function() {
+            modal.style.display = "none";
+            // You can allow access to the website here
+            document.getElementById("main-content").style.display = "block";
+        };
+
+        // If user denies they are under 18
+        denyBtn.onclick = function() {
+            alert("Go To Hell Mother-fucker");
+            window.location.href = "https://www.pexels.com/photo/woman-making-hand-sign-998850/"; // Redirect user to another page
+        };
+    </script>
+    
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo">Tenkaichi Vapor</a>
+            <img class="logo" src="./design-null.jpg" height="70px">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="./index2.html">Shop</a>
+                <a href="https://www.facebook.com/profile.php?id=61568838627407">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1 class="h1">Welcome to Tenkaichi Vapor..! </h1>
+            <p class="p1">Your one-stop shop for the best vapes and accessories</p>
+            <a href="https://www.facebook.com/profile.php?id=61568838627407" class="btn1">Order Now</a>
+        </section>
+
+        <section class="featured-products">
+            <h2 class="fp">Featured Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://vapersunion.co/wp-content/uploads/2024/08/ELFBAR-SNAP-KIT-SOUR-BUBBLEGUM.webp" alt="Vape 1">
+                    <h3>Elfbar Snap kit 14K puffs</h3>
+                    <p>$50.00</p>
+                   <div class="btn-align"><a href="https://www.facebook.com/profile.php?id=61568838627407"><button type="button" class="btn">Shop Now</button></div></a>
+                    
+                </div>
+                <div class="product-card">
+                    <img src="https://vaporworldbd.com/wp-content/webp-express/webp-images/uploads/2024/07/grape-slurpee-_-RAYA-D1.png.webp" alt="Vape 2">
+                    <h3>Snap Raya D1 13k Puffs</h3>
+                    <p>$60.00</p>
+                   <div class="btn-align"><a href="https://www.facebook.com/profile.php?id=61568838627407"><button type="button" class="btn">Shop Now</button></div></a>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn11.bigcommerce.com/s-w062o0xp7r/images/stencil/590x590/products/4518/17026/OFF_STAMP_SW16K__63522.1732555600.jpg?c=1" alt="Vape 2">
+                    <h3>Elfbar snap Smart Kit 14k </h3>
+                    <p>$60.00</p>
+                    <div class="btn-align"><a href="https://www.facebook.com/profile.php?id=61568838627407"><button type="button" class="btn">Shop Now</button></div></a>
+                </div>
+                <div class="product-card">
+                    <img src="https://vaporworldbd.com/wp-content/webp-express/webp-images/uploads/2024/11/Untitled-design-3-1.png.webp" alt="Vape 2">
+        <h3>
+                    BLVK Bar 20K Puffs</h3>
+                    <p>$60.00</p>
+                   <div class="btn-align"><a href="https://www.facebook.com/profile.php?id=61568838627407"><button type="button" class="btn">Shop Now</button></div></a>
+                </div>
+                <div class="product-card">
+                    <img src="https://vaporworldbd.com/wp-content/webp-express/webp-images/uploads/2024/10/Untitled-design-2.png.webp" alt="Vape 2">
+                    <h3>Juice Head 30K Puffs</h3>
+                    <p>$60.00</p>
+                   <div class="btn-align"><a href="https://www.facebook.com/profile.php?id=61568838627407"><button type="button" class="btn">Shop Now</button></div></a>
+                </div>
+                <div class="product-card">
+                    <img src="https://vaporworldbd.com/wp-content/webp-express/webp-images/uploads/2024/03/grape_yacult.png.webp" alt="Vape 2">
+                    <h3>VOLTBAR SWITCH 12K</h3>
+                    <p>$60.00</p>
+                   <div class="btn-align"><a href="https://www.facebook.com/profile.php?id=61568838627407"><button type="button" class="btn">Shop Now</button></div></a>
+                </div>
+                <div class="product-card">
+                    <img src="https://vaporworldbd.com/wp-content/webp-express/webp-images/uploads/2024/08/Aloe-Grape-Cart.png.webp" alt="Vape 2">
+                    <h3>LOST MARY CD 12k Puffs</h3>
+                    <p>$60.00</p>
+                   <div class="btn-align"><a href="https://www.facebook.com/profile.php?id=61568838627407"><button type="button" class="btn">Shop Now</button></div></a>
+                </div>
+                <div class="product-card">
+                    <img src="https://vaporworldbd.com/wp-content/webp-express/webp-images/uploads/2024/09/mango-peach-melon.png.webp" alt="Vape 2">
+                    <h3>
+
+                        
+                    Harum Manis Blazt 18.5k</h3>
+                    <p>$60.00</p>
+                   <div class="btn-align"><a href="https://www.facebook.com/profile.php?id=61568838627407"><button type="button" class="btn">Shop Now</button></div></a>
+                </div>
+                <div class="product-card">
+                    <img src="https://vaporworldbd.com/wp-content/webp-express/webp-images/uploads/2024/09/strawberry-splash-full-kit.png.webp" alt="Vape 2">
+                    <h3>Will Well 11K Puffs</h3>
+                    <p>$60.00</p>
+                   <div class="btn-align"><a href="https://www.facebook.com/profile.php?id=61568838627407"><button type="button" class="btn">Shop Now</button></div></a>
+                </div>
+                <div class="product-card">
+                    <img src="https://vaporworldbd.com/wp-content/webp-express/webp-images/uploads/2024/04/grape-blackcurrant.png.webp">
+                    <h3>TUGBOAT T12000 Grape </h3>
+                    <p>$60.00</p>
+                   <div class="btn-align"><a href="https://www.facebook.com/profile.php?id=61568838627407"><button type="button" class="btn">Shop Now</button></div></a>
+                </div>
+                <hr>
+                
+
+            </div>
+            <hr>
+            <div class="juice-sec">
+                <a href="./index1.html" class="btn-juice">Juice Section</a>  
+                <style>
+                  .btn-juice{background-color: #423125;
+padding: 10px 20px;
+color: white;
+text-decoration: none;
+text-align: center;
+font-weight: bold;} 
+
+.juice-sec{
+    text-align: center;
+}
+                </style>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tenkaichi Vapor. All rights reserved.</p>
+    </footer>
+</body>
+</html>
